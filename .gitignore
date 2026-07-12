@@ -1,0 +1,19 @@
+# Ignore Terraform local state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform directories
+**/.terraform/
+
+# Ignore override files and crash logs
+*.tfvars
+crash.log
+
+# Ignore local editor files
+*.log
+*.swp
+*.swo
+.DS_Store
+
+# Ignore Terraform plan output
+*.tfplan
