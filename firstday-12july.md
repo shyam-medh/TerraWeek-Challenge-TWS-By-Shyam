@@ -1,7 +1,5 @@
 # TerraWeek Challenge - Day 1: Introduction to Terraform
 
-![Terraform Day 1 screenshot](image/firstday-12july/1783865098942.png)
-
 > **TrainWithShubham #TerraWeekChallenge**
 >
 > **Date:** 12 July 2026
@@ -516,7 +514,7 @@ Destroy complete!
 
 ---
 
-# Next Steps (Day 2)[s]()
+# Next Steps (Day 2)
 
 Tomorrow I will explore:
 
