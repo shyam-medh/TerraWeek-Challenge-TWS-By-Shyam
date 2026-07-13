@@ -1,21 +1,49 @@
-# TrainWithShubham #TerraWeek Challenge
+# TerraWeek Challenge
 
-Welcome to my repository for the **TrainWithShubham #TerraWeek Challenge**! Over the course of 7 days, I will be embarking on a thrilling adventure into the world of Infrastructure as Code (IaC) and automation using **Terraform**.
+This is my repository for the **TrainWithShubham #TerraWeek Challenge**. Over 7 days, I am learning Infrastructure as Code (IaC) and using Terraform to automate cloud infrastructure.
 
-This repository serves as a log of my progress and contains all the configurations, documentation, and resources I've built during the challenge.
+This repository tracks my daily progress and contains all the code and notes I write during the challenge.
 
-## Challenge Progress
+## Project Structure
 
-### ✅ Day 1: Introduction to Terraform
-- **Date:** 12 July 2026
-- **Status:** Completed
-- **Details:** [Read the full Day 1 notes here](firstday-12july.md)
+Here is how the repository is laid out:
 
-**What I accomplished on Day 1:**
-- Learned the fundamentals of Infrastructure as Code (IaC) and the key concepts of Terraform.
-- Successfully set up Terraform on my local machine.
-- Wrote my very first Terraform configuration to provision an AWS S3 bucket (`terraweek-challenge-bucket-shyam-medh`) in the `ap-south-1` region.
-- You can find the code in the [`terraform-project`](terraform-project) directory.
+```text
+TerraWeek/
+├── Day-01/
+│   ├── images/
+│   └── day01-notes.md
+├── Day-02/
+│   ├── images/
+│   └── day02-notes.md
+├── terraform-project/
+│   ├── main.tf
+│   ├── variables.tf
+│   └── terraform.tfvars
+├── README.md
+└── terraweek.pdf
+```
 
 ---
-*This project is part of the TerraWeek challenge. You can find the official challenge details in the included [terraweek.pdf](terraweek.pdf).*
+
+## Progress Tracker
+
+### [Day 1: Introduction to Terraform](Day-01/day01-notes.md)
+- **Status:** Completed
+- **Summary:** Learned the basics of IaC, installed Terraform, and wrote a simple script to create an AWS S3 bucket.
+
+### [Day 2: Terraform Configuration Language (HCL)](Day-02/day02-notes.md)
+- **Status:** Completed
+- **Summary:** Learned how to write HCL syntax, moved hardcoded values into variables using `variables.tf` and `terraform.tfvars`, and tested the code using `terraform plan`.
+
+### Day 3: Terraform State Management
+- **Status:** Pending
+
+---
+
+## Tools Used
+- **Cloud Provider:** Amazon Web Services (AWS)
+- **IaC Tool:** Terraform
+
+---
+*This repository is for the TerraWeek challenge. You can find the challenge rules in the included [terraweek.pdf](terraweek.pdf).*

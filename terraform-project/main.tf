@@ -1,7 +1,7 @@
 provider "aws" {
-  region = "ap-south-1"
+  region = var.aws_region
 }
 
 resource "aws_s3_bucket" "terraweek_bucket" {
-  bucket = "terraweek-challenge-bucket-shyam-medh"
+  bucket = var.bucket_name
 }

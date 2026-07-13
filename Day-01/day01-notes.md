@@ -460,31 +460,31 @@ Destroy complete!
 
 ## 1. Configuration of Terraform and AWS IAM
 
-![1783865098942](image/firstday-12july/1783865098942.png)
+![1783865098942](images/1783865098942.png)
 
 ## 2. Terraform Initialization
 
-![1783865245819](image/firstday-12july/1783865245819.png)
+![1783865245819](images/1783865245819.png)
 
 # 3. Terraform Validation
 
-![1783865278244](image/firstday-12july/1783865278244.png)
+![1783865278244](images/1783865278244.png)
 
 ## 4. Terraform Execution Plan
 
-![1783865441932](image/firstday-12july/1783865441932.png)
+![1783865441932](images/1783865441932.png)
 
 ## 5. Terraform Apply
 
-![1783865399026](image/firstday-12july/1783865399026.png)
+![1783865399026](images/1783865399026.png)
 
 ## 6. Terraform State
 
-![1783865677954](image/firstday-12july/1783865677954.png)
+![1783865677954](images/1783865677954.png)
 
 ## 7. Terraform Destroy
 
-![1783865717179](image/firstday-12july/1783865717179.png)
+![1783865717179](images/1783865717179.png)
 
 ---
 
@@ -500,6 +500,17 @@ Destroy complete!
 - Terraform State
 - Terraform Workflow
 - Infrastructure Provisioning
+
+---
+
+# Project Structure
+
+At the end of Day 1, my project structure looks like this:
+
+```text
+terraform-project/
+└── main.tf
+```
 
 ---
 
