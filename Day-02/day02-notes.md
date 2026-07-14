@@ -1,79 +1,81 @@
 # TerraWeek Challenge - Day 2: Terraform Configuration Language (HCL)
 
-> **TrainWithShubham #TerraWeekChallenge**
->
 > **Date:** 13 July 2026
 
 ---
 
-# Challenge for the #TerraWeek: Monday
-
-- Explore the HCL (HashiCorp Configuration Language) syntax used in Terraform.
-- Learn about variables, data types, and expressions in HCL.
-- Practice writing Terraform configurations using HCL syntax.
+## Objective
+The goal of Day 2 is to understand the language Terraform uses to build infrastructure: HashiCorp Configuration Language (HCL). We will learn how to write dynamic, reusable code using variables, different data types, and expressions.
 
 ---
 
-# Table of Contents
+## 1. What is HCL?
 
-- Challenge for the #TerraWeek: Monday
-- What is HCL?
-- HCL Syntax Basics
-- Variables in Terraform
-- Data Types
-- Expressions and Functions
-- Practice: Writing Configurations
-- References
+HashiCorp Configuration Language (HCL) is designed to be easily readable by humans while still being precise enough for machines. Unlike plain JSON or YAML files, HCL supports logic, functions, and dynamic variables, making it a true configuration language.
 
----
+### Basic Syntax Structure
 
-# What is HCL?
-
-HashiCorp Configuration Language (HCL) is a unique configuration language designed by HashiCorp. It is used to build structured configuration formats that are both human-readable and machine-friendly, making it ideal for defining infrastructure.
-
-# HCL Syntax Basics
-
-Terraform configurations are written in `.tf` files using HCL. The basic syntax involves blocks, arguments, and expressions.
+Terraform code is organized into blocks. Every block has a specific type and structure.
 
 ```hcl
 <BLOCK_TYPE> "<BLOCK_LABEL>" "<BLOCK_NAME>" {
   # Block body
-  <IDENTIFIER> = <EXPRESSION> # Argument
+  <IDENTIFIER> = <EXPRESSION> # This is an Argument
 }
 ```
 
-# Variables in Terraform
+- **Block Type**: Defines what you are building (e.g., `resource`, `variable`, `provider`).
+- **Identifier**: The name of a setting you are configuring.
+- **Expression**: The value you assign to that setting.
 
-Variables allow you to customize your Terraform modules without altering the source code. You can define variables in a `variables.tf` file and pass values through `terraform.tfvars`.
+---
+
+## 2. Variables in Terraform
+
+Hardcoding values (like region names or server types) directly into your code is a bad practice. Variables allow you to write a block of code once and customize it for different environments (like Dev, Staging, or Prod) without changing the core logic.
+
+### How to use variables:
+1. **Declare them** in `variables.tf`: This tells Terraform the variable exists and what type of data it holds.
+2. **Assign them** in `terraform.tfvars`: This file automatically passes your specific values into Terraform when you run commands.
 
 ```hcl
+# In variables.tf
 variable "instance_type" {
-  description = "The type of EC2 instance to run."
+  description = "The size of the server"
   type        = string
-  default     = "t2.micro"
+  default     = "t2.micro" # Used if no value is provided
 }
 ```
 
-# Data Types
+---
 
-Terraform supports several data types for variables:
+## 3. Data Types
 
-- **String:** A sequence of Unicode characters (e.g., `"ami-12345"`).
-- **Number:** A numeric value (e.g., `10`).
-- **Bool:** A boolean value (`true` or `false`).
-- **List/Tuple:** A sequence of values (e.g., `["us-east-1a", "us-east-1b"]`).
-- **Map/Object:** A group of values represented by named keys (e.g., `{ environment = "dev", project = "terraweek" }`).
+When declaring variables, you must tell Terraform what kind of data to expect. This helps catch errors early before anything is built in the cloud.
 
-# Expressions and Functions
+- **String**: Normal text (e.g., `"ami-12345"`).
+- **Number**: Math values (e.g., `10`, `3.14`).
+- **Bool**: True or False (`true` / `false`).
+- **List/Tuple**: An ordered list of values (e.g., `["us-east-1a", "us-east-1b"]`).
+- **Map/Object**: A collection of key-value pairs, great for tagging (e.g., `{ environment = "dev", project = "terraweek" }`).
 
-Expressions are used to refer to or compute values within a configuration. Terraform also provides built-in functions to transform and combine values (e.g., `join()`, `max()`, `lower()`).
+---
 
-# Practice: Writing Configurations
+## 4. Expressions and Functions
 
-To practice HCL syntax and variables, I refactored my hardcoded Day 1 script to use `variables.tf` and `terraform.tfvars`.
+HCL allows you to compute values on the fly using built-in functions. You don't need to write Python or bash scripts; Terraform can handle string manipulation, math, and list filtering natively inside your configuration files.
+
+- `join(",", var.list)`: Combines a list into a single string.
+- `lower(var.name)`: Converts text to lowercase.
+- `max(10, 20)`: Returns the highest number.
+
+---
+
+## Practice Task: Writing Configurations
+
+To practice HCL syntax and variables, I refactored my hardcoded Day 1 script to use dynamic variables instead of hardcoded text.
 
 **`variables.tf`**
-
 ```hcl
 variable "aws_region" {
     description = "The AWS region to deploy the resources in"
@@ -88,14 +90,12 @@ variable "bucket_name" {
 ```
 
 **`terraform.tfvars`**
-
 ```hcl
 aws_region = "ap-south-1"
 bucket_name = "terraweek-challenge-bucket-shyam-medh-day2"
 ```
 
 **`main.tf`**
-
 ```hcl
 provider "aws" {
   region = var.aws_region
@@ -108,12 +108,14 @@ resource "aws_s3_bucket" "terraweek_bucket" {
 
 ### Execution Results:
 
-1. terraform plan
+1. `terraform plan`
    ![1783964009562](images/1783964009562.png)
-2. terraform apply
+2. `terraform apply`
    ![1783964304880](images/1783964304880.png)
-3. terraform destroy
+3. `terraform destroy`
    ![1783964348779](images/1783964348779.png)
+
+---
 
 # Project Structure
 
@@ -127,5 +129,4 @@ terraform-project/
 ```
 
 # References
-
 - [Terraform Language Documentation](https://developer.hashicorp.com/terraform/language)

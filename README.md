@@ -16,6 +16,9 @@ TerraWeek/
 ├── Day-02/
 │   ├── images/
 │   └── day02-notes.md
+├── Day-03/
+│   ├── images/
+│   └── day03-notes.md
 ├── terraform-project/
 │   ├── main.tf
 │   ├── variables.tf
@@ -36,7 +39,11 @@ TerraWeek/
 - **Status:** Completed
 - **Summary:** Learned how to write HCL syntax, moved hardcoded values into variables using `variables.tf` and `terraform.tfvars`, and tested the code using `terraform plan`.
 
-### Day 3: Terraform State Management
+### [Day 3: Managing Resources](Day-03/day03-notes.md)
+- **Status:** Completed
+- **Summary:** Exploring Terraform resource types, dependencies (`depends_on`), and lifecycle management by creating AWS EC2 instances.
+
+### Day 4: Terraform State Management
 - **Status:** Pending
 
 ---
