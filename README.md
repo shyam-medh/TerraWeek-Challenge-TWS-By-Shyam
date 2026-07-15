@@ -19,6 +19,9 @@ TerraWeek/
 ├── Day-03/
 │   ├── images/
 │   └── day03-notes.md
+├── Day-04/
+│   ├── images/
+│   └── day04-notes.md
 ├── terraform-project/
 │   ├── main.tf
 │   ├── variables.tf
@@ -43,7 +46,11 @@ TerraWeek/
 - **Status:** Completed
 - **Summary:** Exploring Terraform resource types, dependencies (`depends_on`), and lifecycle management by creating AWS EC2 instances.
 
-### Day 4: Terraform State Management
+### [Day 4: Terraform State Management](Day-04/day04-notes.md)
+- **Status:** Completed
+- **Summary:** Learning about local vs. remote state, and configuring an AWS S3 backend with DynamoDB state locking.
+
+### Day 5: Terraform Modules
 - **Status:** Pending
 
 ---
