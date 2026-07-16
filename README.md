@@ -22,6 +22,9 @@ TerraWeek/
 ├── Day-04/
 │   ├── images/
 │   └── day04-notes.md
+├── Day-05/
+│   ├── images/
+│   └── day05-notes.md
 ├── terraform-project/
 │   ├── main.tf
 │   ├── variables.tf
@@ -50,7 +53,11 @@ TerraWeek/
 - **Status:** Completed
 - **Summary:** Learning about local vs. remote state, and configuring an AWS S3 backend with DynamoDB state locking.
 
-### Day 5: Terraform Modules
+### [Day 5: Terraform Modules](Day-05/day05-notes.md)
+- **Status:** Completed
+- **Summary:** Learning to write DRY (Don't Repeat Yourself) infrastructure code by creating reusable custom modules, and understanding module composition and versioning.
+
+### Day 6: Terraform Workspaces
 - **Status:** Pending
 
 ---
