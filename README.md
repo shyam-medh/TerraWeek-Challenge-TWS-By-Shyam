@@ -26,6 +26,10 @@ TerraWeek/
 │   ├── images/
 │   └── day05-notes.md
 ├── terraform-project/
+│   ├── modules/
+│   │   └── ec2_instance/
+│   │       ├── main.tf
+│   │       └── variables.tf
 │   ├── main.tf
 │   ├── variables.tf
 │   └── terraform.tfvars
