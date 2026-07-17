@@ -25,6 +25,9 @@ TerraWeek/
 ├── Day-05/
 │   ├── images/
 │   └── day05-notes.md
+├── Day-06/
+│   ├── images/
+│   └── day06-notes.md
 ├── terraform-project/
 │   ├── modules/
 │   │   └── ec2_instance/
@@ -61,7 +64,11 @@ TerraWeek/
 - **Status:** Completed
 - **Summary:** Learning to write DRY (Don't Repeat Yourself) infrastructure code by creating reusable custom modules, and understanding module composition and versioning.
 
-### Day 6: Terraform Workspaces
+### [Day 6: Terraform Providers](Day-06/day06-notes.md)
+- **Status:** Completed
+- **Summary:** Learning how Terraform uses provider plugins to interact with cloud APIs, exploring secure authentication, and configuring multiple provider aliases.
+
+### Day 7: Terraform Workspaces & Final Project
 - **Status:** Pending
 
 ---
