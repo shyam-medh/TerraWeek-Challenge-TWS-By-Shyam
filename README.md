@@ -28,6 +28,9 @@ TerraWeek/
 ├── Day-06/
 │   ├── images/
 │   └── day06-notes.md
+├── Day-07/
+│   ├── images/
+│   └── day07-notes.md
 ├── terraform-project/
 │   ├── modules/
 │   │   └── ec2_instance/
@@ -68,8 +71,9 @@ TerraWeek/
 - **Status:** Completed
 - **Summary:** Learning how Terraform uses provider plugins to interact with cloud APIs, exploring secure authentication, and configuring multiple provider aliases.
 
-### Day 7: Terraform Workspaces & Final Project
-- **Status:** Pending
+### [Day 7: Advanced Terraform Topics](Day-07/day07-notes.md)
+- **Status:** Completed
+- **Summary:** Explored advanced concepts including Terraform Workspaces for environment isolation, CI/CD pipelines for automated deployments, and Terraform Cloud.
 
 ---
 
